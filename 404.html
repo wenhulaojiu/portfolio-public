@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 · 星图之外 | 朱洋意</title>
+  <style>
+    :root {
+      --paper: #f5f1e8;
+      --ink: #171410;
+      --ink-mute: #8a8175;
+      --amber: #c2410c;
+      --serif: "Noto Serif SC", "Songti SC", "SimSun", Georgia, serif;
+      --mono: "JetBrains Mono", Consolas, monospace;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      background: var(--paper);
+      background-image: radial-gradient(rgba(23, 20, 16, 0.08) 0.5px, transparent 0.5px);
+      background-size: 26px 26px;
+      color: var(--ink);
+      font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+      text-align: center; padding: 24px;
+    }
+    .code { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.32em; color: var(--ink-mute); margin-bottom: 22px; }
+    h1 { font-family: var(--serif); font-size: clamp(3.4rem, 12vw, 7rem); font-weight: 900; line-height: 1.05; }
+    h1 em { font-style: italic; color: var(--amber); }
+    p { margin-top: 20px; color: var(--ink-mute); max-width: 460px; line-height: 1.8; }
+    .actions { margin-top: 38px; display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+    a.btn {
+      font-family: var(--mono); font-size: 0.85rem; letter-spacing: 0.06em;
+      padding: 13px 28px; border-radius: 999px; text-decoration: none;
+      border: 1px solid rgba(23, 20, 16, 0.2); color: var(--ink); transition: all 0.25s;
+    }
+    a.btn:hover { border-color: var(--amber); color: var(--amber); }
+    a.btn.primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+    a.btn.primary:hover { background: var(--amber); border-color: var(--amber); color: #fff; }
+  </style>
+</head>
+<body>
+  <div class="code">ERROR 404 — OUT OF CONSTELLATION</div>
+  <h1>星图之外<em>.</em></h1>
+  <p>你要找的页面不存在——可能被移动、删除，或者从未上线。<br />The page you're looking for doesn't exist (yet).</p>
+  <div class="actions">
+    <a class="btn primary" href="/portfolio/">← 回到主页 / Home</a>
+    <a class="btn" href="https://github.com/wenhulaojiu">GitHub ↗</a>
+  </div>
+</body>
+</html>

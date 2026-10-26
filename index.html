@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>朱洋意 · 福建师范大学 · 计算机专业 | 个人作品集（公开展示版）</title>
+  <meta name="description" content="朱洋意的作品集公开展示版 — 福建师范大学计算机专业 2025 级，四个零依赖手写项目。本页不含直接联系方式，联系请走 GitHub。" />
+  <meta name="author" content="朱洋意" />
+  <!-- 社交分享（微信/LinkedIn/X 卡片） -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="朱洋意 · 个人作品集 | Zhu Yangyi Portfolio" />
+  <meta property="og:description" content="四个零依赖手写项目：AI 策略游戏 ×2、Chrome 扩展、本站。公开展示版——联系请走 GitHub。" />
+  <meta property="og:url" content="https://wenhulaojiu.github.io/portfolio-public/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#f5f1e8" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#16130f" media="(prefers-color-scheme: dark)" />
+  <link rel="canonical" href="https://wenhulaojiu.github.io/portfolio-public/" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%2316130F'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23F5F1E8' font-family='serif' font-weight='bold'>朱</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Noto+Serif+SC:wght@600;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <noscript>
+    <!-- JS 关闭时直接显示所有内容（否则入场动画会把内容藏住） -->
+    <style>.reveal, .reveal-up { opacity: 1 !important; transform: none !important; animation: none !important; } .preloader { display: none !important; }</style>
+  </noscript>
+</head>
+<body>
+
+  <!-- 顶部阅读进度条 -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- 开场载入动画 -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-name">
+      <span style="--i:0">朱</span><span style="--i:1">洋</span><span style="--i:2">意</span>
+    </div>
+    <div class="preloader-sub">PORTFOLIO · 2026</div>
+  </div>
+
+  <!-- ===== 导航 ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo" data-i18n="nav.logo">朱洋意<span class="nav-logo-dot">.</span></a>
+      <div class="nav-right">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about" data-nav="about" data-i18n="nav.about">关于</a></li>
+          <li><a href="#skills" data-nav="skills" data-i18n="nav.skills">技能</a></li>
+          <li><a href="#projects" data-nav="projects" data-i18n="nav.projects">项目</a></li>
+          <li><a href="#contact" data-nav="contact" data-i18n="nav.contact">联系</a></li>
+        </ul>
+        <a href="#contact" class="nav-cta" data-i18n="nav.cta">招实习生？点这里</a>
+        <button class="music-btn" id="musicBtn" aria-pressed="false" aria-label="背景音乐" data-i18n-title="ui.music" title="背景音乐（点击开关）">
+          <span class="music-icon">♪</span>
+          <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+        <button class="lang-btn mono" id="langBtn" aria-label="切换语言 / Switch language" title="切换语言 / Switch language">EN</button>
+        <button class="theme-toggle" id="themeToggle" aria-label="切换主题" title="切换主题">
+          <span class="theme-icon">◐</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero" id="top">
+    <canvas id="constellation"></canvas>
+    <div class="hero-inner">
+      <p class="hero-eyebrow mono"><span class="hero-rule"></span><span data-i18n="hero.eyebrow">PORTFOLIO — 福建师范大学 · 计算机专业 · 2025 级</span></p>
+      <h1 class="hero-name serif">
+        <span class="hero-line reveal-up" style="--d:.05s">朱洋意</span>
+        <span class="hero-line hero-line-en reveal-up" style="--d:.18s">Zhu&nbsp;Yangyi<span class="hero-amp">.</span></span>
+      </h1>
+      <p class="hero-typing reveal-up" style="--d:.3s">
+        <span class="mono hero-typing-label" data-i18n="hero.typingLabel">IS</span>
+        <span class="typing serif" id="typing"></span><span class="cursor">_</span>
+      </p>
+      <p class="hero-desc reveal-up" style="--d:.42s" data-i18n="hero.desc">
+        把想法做成能跑起来的东西。喜欢手写每一行代码，也擅长让 AI 加速——<br class="br-desktop" />
+        目前正在寻找 <strong>2027 暑期 / 日常开发实习</strong>（前端 · 全栈 · AI 应用）。
+      </p>
+      <div class="hero-actions reveal-up" style="--d:.54s">
+        <a href="#projects" class="btn btn-solid" data-i18n="hero.cta1">查看项目 <span class="btn-arrow">→</span></a>
+        <a href="#contact" class="btn btn-line" data-i18n="hero.cta2">与我联系</a>
+      </div>
+      <div class="hero-meta mono reveal-up" style="--d:.66s">
+        <span>FJNU · 2025—2029</span><i>/</i>
+        <span data-i18n="hero.meta2">福州 · 福建</span><i>/</i>
+        <span class="hero-status"><em class="pulse"></em>OPEN TO INTERNSHIP</span>
+      </div>
+    </div>
+    <a class="scroll-hint mono" href="#about">SCROLL<span class="scroll-line"></span></a>
+  </header>
+
+  <!-- ===== 技术栈跑马灯 ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marqueeTrack"></div>
+  </div>
+
+  <main id="main">
+
+    <!-- ===== 01 关于 ===== -->
+    <section class="section section-cream" id="about">
+      <div class="container">
+        <div class="sec-head">
+          <span class="sec-no mono">01 / 05</span>
+          <span class="sec-rule"></span>
+          <span class="sec-label mono">ABOUT</span>
+        </div>
+        <h2 class="sec-title serif reveal" data-i18n="about.title">关于我<span class="sec-title-dot">.</span></h2>
+
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p class="about-lede serif" data-i18n="about.lede">
+              你好！我是朱洋意，福建师范大学计算机专业 2025 级本科生。
+              从写下第一行 Hello&nbsp;World 开始，我就对「做东西给人用」这件事上了瘾。
+            </p>
+            <p data-i18n="about.p1">
+              大一到现在，我已独立完成并上线了两个 AI 小游戏（<strong>圈层谣言攻防战</strong>、<strong>AI 伪装狼人杀</strong>）
+              和一个浏览器扩展（<strong>刘看山网页助手</strong>），全部零第三方依赖。
+              这个网站是我最新的作品——从视觉设计到每一行动画全部手写。
+              它会一直迭代，欢迎随时回来看看新东西。
+            </p>
+            <p data-i18n="about.p2">
+              目前主攻 <strong>Web 全栈</strong> 与 <strong>AI 应用开发</strong>：白天啃数据结构和计算机网络，
+              晚上写自己的小项目。我习惯用 AI 辅助编程提效，但坚持搞懂每一行代码背后的原理——
+              毕竟面试官问的是我，不是 Copilot。
+            </p>
+            <div class="about-edu">
+              <div class="edu-item">
+                <span class="edu-year mono">2025 —</span>
+                <span class="edu-school serif" data-i18n="about.eduSchool">福建师范大学</span>
+                <span class="edu-major" data-i18n="about.eduMajor">计算机科学与技术 · 本科在读（大二）</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-cards reveal" style="--d:.15s">
+            <div class="code-card">
+              <div class="code-card-bar">
+                <span class="cc-dot"></span><span class="cc-dot"></span><span class="cc-dot"></span>
+                <span class="cc-name mono">zhu-yangyi.ts</span>
+              </div>
+              <pre class="mono"><code>const zhuYangyi = {
+  school: "福建师范大学",
+  major: "计算机科学与技术",
+  grade: "2025 级 · 大二",
+  focus: ["Web 全栈", "AI 应用"],
+  shipped: ["AI 游戏 ×2", "Chrome 扩展 ×1"],
+  status: "找实习中 🚀",
+};</code></pre>
+            </div>
+            <div class="quote-card">
+              <span class="quote-mark serif">“</span>
+              <p class="serif">Talk is cheap. Show me the code.</p>
+              <span class="quote-by mono">— LINUS TORVALDS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 02 技能（深色） ===== -->
+    <section class="section section-ink" id="skills">
+      <div class="container">
+        <div class="sec-head sec-head-dark">
+          <span class="sec-no mono">02 / 05</span>
+          <span class="sec-rule"></span>
+          <span class="sec-label mono">SKILLS</span>
+        </div>
+        <h2 class="sec-title serif reveal" data-i18n="skills.title">技能版图<span class="sec-title-dot">.</span></h2>
+        <p class="sec-sub reveal" data-i18n="skills.sub">不背名词，只列真正写过代码的。</p>
+        <div class="skills-grid" id="skillsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== 03 项目 ===== -->
+    <section class="section section-cream" id="projects">
+      <div class="container">
+        <div class="sec-head">
+          <span class="sec-no mono">03 / 05</span>
+          <span class="sec-rule"></span>
+          <span class="sec-label mono">SELECTED WORKS</span>
+        </div>
+        <h2 class="sec-title serif reveal" data-i18n="projects.title">项目精选<span class="sec-title-dot">.</span></h2>
+        <p class="sec-sub reveal" data-i18n="projects.sub">数量不多，每一个都亲手完成。列表会持续更新。</p>
+        <div class="projects-list" id="projectsList"></div>
+      </div>
+    </section>
+
+    <!-- ===== 04 数据带（深色） ===== -->
+    <section class="section section-ink stats-band" id="stats">
+      <div class="container">
+        <div class="sec-head sec-head-dark">
+          <span class="sec-no mono">04 / 05</span>
+          <span class="sec-rule"></span>
+          <span class="sec-label mono">BY THE NUMBERS</span>
+        </div>
+        <div class="stats-grid" id="statsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== 05 联系 ===== -->
+    <section class="section section-cream contact-section" id="contact">
+      <div class="container">
+        <div class="sec-head">
+          <span class="sec-no mono">05 / 05</span>
+          <span class="sec-rule"></span>
+          <span class="sec-label mono">CONTACT</span>
+        </div>
+        <h2 class="contact-title serif reveal" data-i18n="contact.title">正在找实习的<em>我</em>，<br />正在招实习生的<em>你</em>。</h2>
+        <p class="contact-sub reveal" data-i18n="contact.sub">实习机会、项目合作、或者单纯聊聊技术——欢迎通过 GitHub 联系，我会尽快回复。</p>
+        <a class="contact-mail serif reveal" href="https://github.com/wenhulaojiu" target="_blank" rel="noopener">github.com/wenhulaojiu<span class="mail-arrow">→</span></a>
+
+        <div class="contact-grid reveal" id="contactGrid"></div>
+        <p class="contact-note mono reveal" data-i18n="contact.note">本页为公开展示版 · GitHub 是唯一公开联系方式 · 卡片可一键复制</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== 页脚（深色） ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="footer-logo serif" data-i18n="footer.logo">朱洋意<span class="footer-dot">.</span></span>
+        <span class="mono footer-meta">© <span id="year"></span><span> · HANDCRAFTED WITH VANILLA HTML / CSS / JS</span></span>
+      </div>
+      <div class="footer-right mono">
+        <a href="https://github.com/wenhulaojiu" target="_blank" rel="noopener">GITHUB ↗</a>
+        <button class="back-top" id="backTop" data-i18n="ui.backTop">回到顶部 ↑</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== AI 助手 ===== -->
+  <button class="chat-fab mono" id="chatFab" aria-label="AI 助手">AI<span class="fab-dot"></span></button>
+  <div class="chat-panel" id="chatPanel" role="dialog" aria-label="AI 助手">
+    <div class="chat-head">
+      <div>
+        <div class="chat-title serif" data-i18n="chat.title">AI 助手</div>
+        <div class="chat-sub mono"><em class="pulse"></em>ASK ME ABOUT ZHU YANGYI</div>
+      </div>
+      <button class="chat-close" id="chatClose" aria-label="关闭">×</button>
+    </div>
+    <div class="chat-msgs" id="chatMsgs"></div>
+    <div class="chat-chips" id="chatChips"></div>
+    <form class="chat-form" id="chatForm">
+      <input type="text" id="chatInput" data-i18n-ph="chat.ph" placeholder="问我任何关于他的问题…" autocomplete="off" />
+      <button type="submit" class="chat-send mono" aria-label="发送">→</button>
+    </form>
+  </div>
+
+  <!-- 复制成功提示 -->
+  <div class="toast mono" id="toast" data-i18n="toast">已复制到剪贴板 ✓</div>
+
+  <script src="js/data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
